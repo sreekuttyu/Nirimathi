@@ -1,0 +1,32 @@
+/* App-level overrides — kept minimal; all design tokens live in index.css */
+
+/* Remove default focus rings for mouse users; keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid #8A6A45;
+  outline-offset: 3px;
+}
+
+/* Placeholder color across all inputs */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(246, 242, 234, 0.25);
+}
+
+/* Masonry multi-column helper */
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+    column-gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+    column-gap: 1.25rem;
+  }
+}
